@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pagina noastra</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        .notes-container-grid{
+            margin-top: 30px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+        }
+
+        .notes {
+            background-color: burlywood;
+            border-radius: 10px;
+            padding: 15px;
+        }
+
+        input, textarea {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container mb-3">
+    <div class="title">
+        <h2>Notes</h2>
+        <p class="light">My notes</p>
+
+        <form action='/notes' method="POST">
+            <h1> Add note</h1>
+            <label>Title</label>
+            <input name="title" placeholder="title" />
+            <label>Description</label>
+            <textarea name="description"></textarea>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <div class="notes-container-grid">
+        <% notez.forEach(note => {%>
+            <a href="/notes/<%=note.id%>">
+                <div class="notes">
+                    <h4><%= note.title %></h4>
+                    <p><%= note.description %></p>
+
+                    <button>Delete</button>
+                </div>
+            </a>
+        <% }) %>
+    </div>
+
+
+</div>
+
+</body>
+</html>

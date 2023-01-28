@@ -1,0 +1,28 @@
+{
+  "name": "express-mongo-ejs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "develop": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sebastian-simionescu/node-express-mongo-ejs.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sebastian-simionescu/node-express-mongo-ejs/issues"
+  },
+  "homepage": "https://github.com/sebastian-simionescu/node-express-mongo-ejs#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  },
+  "dependencies": {
+    "body-parser": "^1.20.1",
+    "ejs": "^3.1.8",
+    "express": "^4.18.2"
+  }
+}
